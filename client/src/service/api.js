@@ -2,10 +2,8 @@ import axios from 'axios'
 import { API_NOTIFICATION_MESSAGES,service_url } from '../constants/config'
 import { getAccessToken, getType } from '../utils/common-utils'
 
-const API_URL='https://campusconnect-gwvj.onrender.com'
-
 const axiosInstance=axios.create({
-    baseURL: API_URL,
+    baseURL: process.env.REACT_APP_BASE_URL,
     timeout: 10000,
     headers: {
         "Content-Type":"application/json",
